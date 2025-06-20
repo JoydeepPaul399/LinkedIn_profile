@@ -9,7 +9,7 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 const Navbar = () => {
     
   return (
-    <header className='fixed h-14 bg-white w-full border border-t-transparent border-l-transparent border-r-transparent border-b-[#e8e8e8] '>
+    <header className='fixed top-0 left-0 h-14 bg-white w-full border border-t-transparent border-l-transparent border-r-transparent border-b-[#e8e8e8] z-100 '>
         <nav className='h-full'>
             {/* Left side  */}
             <div className='flex items-center justify-center gap-28 h-full'>
