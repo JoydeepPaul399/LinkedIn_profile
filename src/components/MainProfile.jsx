@@ -9,9 +9,6 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 
 
-
-
-
 const MainProfile = () => {
     const ref= useRef()
     const scrollLeftBtnRef= useRef()

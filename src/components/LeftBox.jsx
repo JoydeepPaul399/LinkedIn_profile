@@ -1,21 +1,36 @@
 import React from 'react'
 import MainProfile from './MainProfile';
 import SuggestedBox from './SuggestedBox';
+import Analysis from './Analysis';
+import Featured from './Featured';
 
 const LeftBox = () => {
   return (
     <div>
-      <div className='rounded-2xl h-full bg-white overflow-x-hidden pb-8 shadow-md'>
+      <div className='rounded-xl h-full bg-white overflow-x-hidden pb-8 shadow-md border border-[#f4f2ee]'>
         <div className=" h-full">
           {/* Profile box */}
           <MainProfile />
         </div>
       </div>
-
-      <div className='rounded-2xl h-full bg-white overflow-x-hidden pb-3 mt-4 shadow-md'>
+      {/* Suggested for you box */}
+      <div className='rounded-xl h-full bg-white overflow-x-hidden pb-3 mt-4 shadow-md border border-[#f4f2ee]'>
         <div className=" h-full p-2">
-          {/* Suggested for you box */}
           <SuggestedBox />
+        </div>
+      </div>
+
+      {/* Analysis  */}
+      <div className='rounded-xl h-full bg-white overflow-x-hidden  mt-4 border border-[#f4f2ee] shadow-md'>
+        <div className=" h-full">
+          <Analysis />
+        </div>
+      </div>
+
+      {/* Featured  */}
+      <div className='rounded-xl h-full bg-white overflow-x-hidden pb-3 mt-4 shadow-md border border-[#f4f2ee]'>
+        <div className=" h-full w-full">
+          <Featured />
         </div>
       </div>
 

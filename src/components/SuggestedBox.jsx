@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 
 const SuggestedBox = () => {
   return (
-    <section className='h-full'>
+    <section className='h-full mt-4'>
         <div className='h-full mx-3 mb-2'>
             <h2 className='text-base font-semibold text-[#000000E6]'>Suggested for you</h2>
             <div className='flex items-center gap-1 text-sm text-[#00000099]'>
