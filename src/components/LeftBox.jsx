@@ -3,6 +3,10 @@ import MainProfile from './MainProfile';
 import SuggestedBox from './SuggestedBox';
 import Analysis from './Analysis';
 import Featured from './Featured';
+import Education from './Education';
+import ProjectsBox from './ProjectsBox';
+import Skills from './Skills';
+import Languages from './Languages';
 
 const LeftBox = () => {
   return (
@@ -31,6 +35,33 @@ const LeftBox = () => {
       <div className='rounded-xl h-full bg-white overflow-x-hidden pb-3 mt-4 shadow-md border border-[#f4f2ee]'>
         <div className=" h-full w-full">
           <Featured />
+        </div>
+      </div>
+
+      {/* Education  */}
+      <div className='rounded-xl h-full bg-white overflow-x-hidden pb-3 mt-4 shadow-md border border-[#f4f2ee]'>
+        <div className=" h-full w-full">
+          <Education />
+        </div>
+      </div>
+
+      {/* Projects */}
+      <div className='rounded-xl h-full bg-white overflow-x-hidden pb-3 mt-4 shadow-md border border-[#f4f2ee]'>
+        <div className=" h-full w-full">
+          <ProjectsBox />
+        </div>
+      </div>
+
+      {/* Skills */}
+      <div className='rounded-xl h-full bg-white overflow-x-hidden mt-4 shadow-md border border-[#f4f2ee]'>
+        <div className=" h-full w-full">
+          <Skills />
+        </div>
+      </div>
+
+      <div className='rounded-xl h-full bg-white overflow-x-hidden mt-4 shadow-md border border-[#f4f2ee]'>
+        <div className=" h-full w-full">
+          <Languages />
         </div>
       </div>
 

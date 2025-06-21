@@ -22,10 +22,10 @@ const ProfileViewer = () => {
       {
         viewerList.map((item, index)=>{
           return (
-            <>
+            <div key={index}>
             <ViewerComponent image={item.image} name={item.name}  />
             { index !== lastIndex && <Line /> }
-            </>
+            </div>
           )
         })
       }

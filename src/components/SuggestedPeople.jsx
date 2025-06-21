@@ -14,7 +14,7 @@ const SuggestedPeople = () => {
         <div className='w-[95%] mx-auto'>
         {
           connectionSuggestionList.map((item, index)=>(
-              <div className='w-full flex flex-col justify-center items-start'>
+              <div key={index} className='w-full flex flex-col justify-center items-start'>
                 <ConnectPeople name={item.name} image= {item.image} desc= {item.desc}  />
                 { suggestionListLen !== index && <Line /> }
               </div>
