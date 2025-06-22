@@ -7,6 +7,8 @@ import Education from './Education';
 import ProjectsBox from './ProjectsBox';
 import Skills from './Skills';
 import Languages from './Languages';
+import AboutSection from './AboutSection';
+import aboutText from '../assets/aboutText';
 
 const LeftBox = () => {
   return (
@@ -28,6 +30,13 @@ const LeftBox = () => {
       <div className='rounded-xl h-full bg-white overflow-x-hidden  mt-4 border border-[#f4f2ee] shadow-md'>
         <div className=" h-full">
           <Analysis />
+        </div>
+      </div>
+
+      {/* About */}
+      <div className='rounded-xl h-full bg-white overflow-x-hidden  mt-4 border border-[#f4f2ee] shadow-md'>
+        <div className=" h-full">
+          <AboutSection text={aboutText} />
         </div>
       </div>
 

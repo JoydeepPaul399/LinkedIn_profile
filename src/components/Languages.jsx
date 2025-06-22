@@ -9,7 +9,7 @@ const Languages = () => {
   const lastIndex= languages.length - 1
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full pb-4">
       <div className="flex justify-between items-center py-2 px-4">
         <div>
           <h1 className="font-semibold text-lg text-[#191919]">Languages</h1>

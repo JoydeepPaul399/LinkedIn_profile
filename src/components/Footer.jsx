@@ -11,9 +11,9 @@ const Footer = () => {
       <div>
         {/* main footer */}
         <div className="flex">
-          <div className="grid grid-cols-3 text-xs">
+          <div className="grid grid-cols-3 gap-2 text-xs text-[#62615f]">
             <div>
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <li>
                   <Link to="#">About</Link>
                 </li>
@@ -37,7 +37,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <li>
                   <Link to="#">Accessibility</Link>
                 </li>
@@ -53,7 +53,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <li>
                   <Link to={"#"}>Talent Solutions</Link>
                 </li>
@@ -71,37 +71,54 @@ const Footer = () => {
           </div>
 
           {/* right side  */}
-          <div className="flex gap-3">
-            <div className="">
-              <div className="">
-                <div className="flex flex-col">
-                    <div className="text-[#3d3d3c]">
-                        <RiQuestionFill />
-                    </div>
-                    <div>
-                        <span className="text-sm font-semibold text-[#00000099]">Questions</span>
-                        <span className="text-xs">Visit our Help Center</span>
-                    </div>
+          <div className="flex gap-2  w-[80%]">
+
+            {/* start  */}
+            <div className=" px-5 flex-1/2">
+              <div>
+                <div className="flex gap-1 items-start">
+                  <div className="text-[#3d3d3c]">
+                    <RiQuestionFill size={25} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-sm font-semibold text-[#00000099]">Questions</span>
+                    <span className="text-[13px] text-[#62615f]">Visit our Help Center</span>
+                  </div>
                 </div>
               </div>
+
+              {/* new  */}
               <div>
-                <div className="flex">
-                  <IoSettingsSharp />
-                  <span className="text-sm">Manage your account and privacy</span>
+                <div className="flex gap-1 items-start">
+                  <div className="text-[#3d3d3c]">
+                    <IoSettingsSharp size={25} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-sm font-semibold text-[#00000099]">Manage your account and privacy</span>
+                    <span className="text-[13px] text-[#62615f]">Go to your Settings.</span>
+                  </div>
                 </div>
-                <span className="text-xs">Go to your Settings.</span>
               </div>
+
               <div>
-                <div className="flex">
-                  <MdPrivacyTip />
-                  <span className="text-sm">Recommendation transparency</span>
+                <div className="flex gap-1 items-start">
+                  <div className="text-[#3d3d3c]">
+                    <MdPrivacyTip size={25} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-sm font-semibold text-[#00000099]">Recommendation transparency</span>
+                    <span className="text-[13px] text-[#62615f]">Learn more about Recommended Content.</span>
+                  </div>
                 </div>
-                <span className="text-xs">Learn more about Recommended Content.</span>
               </div>
             </div>
-            <div className="w-full flex flex-col">
-              <label htmlFor="selectLang">Select Language</label>
-              <select className="bg-white rounded-md pl-1 pr-8 py-1 border" id="selectLang">
+
+            {/* end  */}
+
+            {/* select language  */}
+            <div className="w-full flex flex-col flex-grow gap-1.5">
+              <label className="text-[#62615f] text-xs" htmlFor="selectLang">Select Language</label>
+              <select className="bg-white rounded-md pl-1 pr-8 py-1 border text-[#62615f] text-sm" id="selectLang">
                 <option value="English (English)">English (English)</option>
                 <option value="العربية (Arabic)">العربية (Arabic)</option>
                 <option value="বাংলা (Bangla)">বাংলা (Bangla)</option>
@@ -115,7 +132,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <span>LinkedIn Corporation © 2025</span>
+        <span className="text-sm text-[#62615f]">LinkedIn Corporation © 2025</span>
       </div>
     </div>
   );
