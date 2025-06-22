@@ -1,0 +1,14 @@
+<svg
+  role="none"
+  aria-hidden="true"
+  class="artdeco-button__icon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="20"
+  viewBox="0 0 16 16"
+>
+  <path
+    fill="currentColor"
+    d="M6.00016 10.1998L3.30016 7.4998L2.3335 8.46647L6.00016 12.1331L14.0002 4.13314L13.0335 3.16647L6.00016 10.1998Z"
+  />
+</svg>

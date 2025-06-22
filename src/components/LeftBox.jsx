@@ -9,6 +9,7 @@ import Skills from './Skills';
 import Languages from './Languages';
 import AboutSection from './AboutSection';
 import aboutText from '../assets/aboutText';
+import InterestSection from './InterestSection';
 
 const LeftBox = () => {
   return (
@@ -71,6 +72,12 @@ const LeftBox = () => {
       <div className='rounded-xl h-full bg-white overflow-x-hidden mt-4 shadow-md border border-[#f4f2ee]'>
         <div className=" h-full w-full">
           <Languages />
+        </div>
+      </div>
+
+      <div className='rounded-xl h-full bg-white overflow-x-hidden mt-4 shadow-md border border-[#f4f2ee]'>
+        <div className=" h-full w-full">
+          <InterestSection />
         </div>
       </div>
 
