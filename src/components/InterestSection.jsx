@@ -29,7 +29,21 @@ const InterestSection = () => {
                         <h4 className="text-[#191919] dark:text-[#ddd]">Nielson</h4>
                         <p className="text-[#191919] dark:text-[#aaa]">1,322,269 followers</p>
                         <button className="shadow-[0_0_0_1.3px_#404040] dark:shadow-[0_0_0_1.3px_#aaa] text-[#404040] dark:text-[#aaa] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#f2f2f2] dark:hover:bg-[#333] hover:shadow-[0_0_0_2px_#171717] dark:hover:shadow-[0_0_0_2px_#eee] w-fit mt-2 flex justify-start items-center gap-1 ">
-                            <img src={rightSvg} alt="" />
+                            {/* <img src={rightSvg} alt="img" /> */}
+                            <svg
+                            role="none"
+                            aria-hidden="true"
+                            className="artdeco-button__icon dark:text-[#aaa]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 16 16"
+                            >
+                            <path
+                                fill="currentColor"
+                                d="M6.00016 10.1998L3.30016 7.4998L2.3335 8.46647L6.00016 12.1331L14.0002 4.13314L13.0335 3.16647L6.00016 10.1998Z"
+                            />
+                            </svg>
                             Following
                         </button>
                     </div>
@@ -41,7 +55,21 @@ const InterestSection = () => {
                         <h4 className="text-[#191919] dark:text-[#ddd]">Red Oak Technologies</h4>
                         <p className="text-[#191919] dark:text-[#aaa]">128,937 followerss</p>
                         <button className="shadow-[0_0_0_1.3px_#404040] dark:shadow-[0_0_0_1.3px_#aaa] text-[#404040] dark:text-[#aaa] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#f2f2f2] dark:hover:bg-[#333] hover:shadow-[0_0_0_2px_#171717] dark:hover:shadow-[0_0_0_2px_#eee] w-fit mt-2 flex justify-start items-center gap-1 ">
-                            <img src={rightSvg} alt="" />
+                            {/* <img src={rightSvg} alt="img" /> */}
+                            <svg
+                            role="none"
+                            aria-hidden="true"
+                            className="artdeco-button__icon dark:text-[#aaa]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 16 16"
+                            >
+                            <path
+                                fill="currentColor"
+                                d="M6.00016 10.1998L3.30016 7.4998L2.3335 8.46647L6.00016 12.1331L14.0002 4.13314L13.0335 3.16647L6.00016 10.1998Z"
+                            />
+                            </svg>
                             Following
                         </button>
                     </div>

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialValue= {
-    mode: "light",
+    mode: localStorage.getItem("theme") || "light",
     fName: "Joydeep",
     lName: "Paul"
 }

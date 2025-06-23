@@ -20,7 +20,7 @@ const EditUserDetails = ({ close }) => {
         <Line />
 
         {/* Scrollable Form Content */}
-        <div className="px-4 py-4 w-full flex-1 overflow-y-auto flex flex-col gap-6">
+        <div className="px-4 py-4 w-full flex-1 overflow-y-auto hide-scrollbar flex flex-col gap-6">
           <div className="text-[#000000BF] dark:text-gray-400 text-xs">* Indicates required</div>
           <form className="flex flex-col gap-4 text-[#000000BF] dark:text-gray-400">
             {/* First name */}

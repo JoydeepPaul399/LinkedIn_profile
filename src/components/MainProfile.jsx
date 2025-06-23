@@ -58,7 +58,7 @@ const MainProfile = () => {
                         alt="Profile Picture"
                     />
                 </div>
-                <div onClick={editUsrDtls} className="absolute right-10 top-54 p-2 rounded-full hover:bg-gray-100 cursor-pointer dark:text-white">
+                <div onClick={editUsrDtls} className="absolute right-10 top-54 p-2 rounded-full hover:bg-gray-100 hover:dark:text-black cursor-pointer dark:text-white">
                     <MdOutlineModeEdit size={28} />
                 </div>
             </section>
@@ -102,9 +102,9 @@ const MainProfile = () => {
                                 Bengaluru, Karnataka, India
                             </p>
                             <span className="w-0.5 h-0.5 text-sm bg-[#9e9e9e] rounded-full"></span>
-                            <Link className="text-[14px] text-[#0A66C2] font-semibold hover:underline" to="#">Contact info</Link>
+                            <Link className="text-[14px] text-[#0A66C2] dark:text-[#3394FF] font-semibold hover:underline" to="#">Contact info</Link>
                         </div>
-                        <Link to="#" className="text-sm text-[#0A66C2] font-semibold hover:underline">249 Connection</Link>
+                        <Link to="#" className="text-sm text-[#0A66C2] dark:text-[#3394FF] font-semibold hover:underline">249 Connection</Link>
                     </div>
                 </div>
                 <div className="flex justify-center items-center gap-2 w-full dark:text-white">
@@ -117,13 +117,13 @@ const MainProfile = () => {
                 <button className="border-none rounded-2xl px-4 py-1 bg-[#0a66c2] text-white font-semibold cursor-pointer hover:bg-[#004182]">
                     Open to
                 </button>
-                <button className="shadow-[0_0_0_1.3px_#0a66c2] text-[#0a66c2] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#ebf4fc] hover:shadow-[0_0_0_2px_#004182]">
+                <button className="shadow-[0_0_0_1.3px_#0a66c2] text-[#0a66c2] dark:text-[#3394FF] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#ebf4fc] hover:shadow-[0_0_0_2px_#004182]">
                     Add Profile section
                 </button>
-                <button className="shadow-[0_0_0_1.3px_#0a66c2] text-[#0a66c2] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#ebf4fc] hover:shadow-[0_0_0_2px_#004182]">
+                <button className="shadow-[0_0_0_1.3px_#0a66c2] text-[#0a66c2] dark:text-[#3394FF] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#ebf4fc] hover:shadow-[0_0_0_2px_#004182]">
                     Enhance Profile
                 </button>
-                <button className="shadow-[0_0_0_1.3px_#404040] text-[#404040] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#f2f2f2] hover:shadow-[0_0_0_2px_#171717]">
+                <button className="shadow-[0_0_0_1.3px_#404040] text-[#404040] rounded-2xl px-4 py-1 font-semibold cursor-pointer hover:bg-[#f2f2f2] hover:dark:bg-gray-400 dark:bg-[#222] dark:text-white hover:shadow-[0_0_0_2px_#171717]">
                     Resources
                 </button>
             </div>

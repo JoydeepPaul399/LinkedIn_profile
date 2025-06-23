@@ -1,11 +1,15 @@
 import React from "react";
 
+
 const Folder = () => {
+  
+
   return (
     <svg
       role="none"
       aria-hidden="true"
-      className="ivm-view-attr__icon ivm-view-attr__icon--icon text-[#404040]"
+      fill="currentColor"
+      className="ivm-view-attr__icon ivm-view-attr__icon--icon text-[#404040] dark:text-white "
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
