@@ -24,11 +24,12 @@ const AboutSection = ({ text }) => {
     <section className="w-full mx-4 max-w-full box-border pr-6">
       {/* Header */}
       <div className="flex justify-between items-center py-2">
-        <h1 className="font-semibold text-lg text-[#191919]">About</h1>
+        <h1 className="font-semibold text-lg text-[#191919] dark:text-white">About</h1>
         <button
           type="button"
           aria-label="Edit about section"
-          className="text-[#404040] p-2 rounded-full hover:bg-gray-100 cursor-pointer focus:outline-none">
+          className="text-[#404040] dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer focus:outline-none"
+        >
           <MdOutlineModeEdit size={28} />
         </button>
       </div>
@@ -36,7 +37,7 @@ const AboutSection = ({ text }) => {
       {/* Text Content */}
       <div
         ref={textRef}
-        className={`overflow-hidden pr-2 whitespace-pre-wrap transition-all duration-100 text-gray-800 ${
+        className={`overflow-hidden pr-2 whitespace-pre-wrap transition-all duration-100 text-gray-800 dark:text-gray-300 ${
           isExpanded ? 'max-h-full' : 'max-h-[100px]'
         }`}
       >
@@ -47,7 +48,7 @@ const AboutSection = ({ text }) => {
       {isOverflowing && (
         <button
           onClick={toggleExpand}
-          className="mt-2 text-blue-600 font-semibold cursor-pointer hover:underline focus:outline-none"
+          className="mt-2 text-blue-600 dark:text-blue-400 font-semibold cursor-pointer hover:underline focus:outline-none"
           type="button"
         >
           {isExpanded ? 'See less' : 'See more'}

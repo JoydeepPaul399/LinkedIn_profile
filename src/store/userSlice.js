@@ -18,13 +18,13 @@ export const userSlice= createSlice({
             state.mode= state.mode==="light" ? "dark" : "light"
             localStorage.setItem('theme', state.mode);
         },
-        setTheme: (state, action) => {
-            state.mode = action.payload;
-            localStorage.setItem('theme', state.mode);
-        }
+        // setTheme: (state, action) => {
+        //     state.mode = action.payload;
+        //     localStorage.setItem('theme', state.mode);
+        // }
     }
 })
 
-export const {setUserDetails, toggleTheme, setTheme}= userSlice.actions
+export const {setUserDetails, toggleTheme}= userSlice.actions
 
 export default userSlice.reducer
