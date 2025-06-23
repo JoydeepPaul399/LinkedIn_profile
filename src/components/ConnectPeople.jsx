@@ -4,7 +4,7 @@ import { CgUserAdd } from "react-icons/cg";
 
 const ConnectPeople = ({image, name, desc}) => {
     return (
-        <div className='flex flex-col w-[80%] justify-start gap-4 mt-4 mb-4 ml-4'>
+        <div className='flex flex-col w-[80%] md:w-[90%] justify-start gap-4 mt-4 mb-4 ml-4'>
             <div className='flex gap-1.5 justify-start items-start w-full'>
                 <img className='h-12 rounded-full' src={image} alt="Viewer Image" />
                 <div className='flex flex-col items-start'>

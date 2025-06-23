@@ -12,7 +12,7 @@ const Skills = () => {
   const lastIndex= skillData.length - 1
   return (
     <div className="w-full h-full">
-      <div className="flex justify-between items-center py-2 px-4">
+      <div className="flex justify-between items-center px-4">
         <div>
           <h1 className="font-semibold text-lg text-[#191919]">Skills</h1>
         </div>

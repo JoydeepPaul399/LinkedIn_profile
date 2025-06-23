@@ -7,13 +7,14 @@ import { Link } from "react-router-dom";
 import { GrFormEdit } from "react-icons/gr";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
-
+import EditUserDetails from "./EditUserDetails";
 
 const MainProfile = () => {
     const ref= useRef()
     const scrollLeftBtnRef= useRef()
     const [showLeftScrollBtn, setShowLeftScrollBtn]= useState(false)
     const [showRightScrollBtn, setShowRightScrollBtn] = useState(false);
+    const [editUser, setEditUser]= useState(false)
 
     const handleScroll = ()=>{
         const el= ref.current
@@ -29,6 +30,10 @@ const MainProfile = () => {
 
     const scrollRightBtn= ()=>{
         ref.current.scrollLeft +=200
+    }
+
+    const editUsrDtls= ()=>{
+      setEditUser(true)
     }
 
     useEffect(()=>{
@@ -53,7 +58,7 @@ const MainProfile = () => {
             alt="Profile Picture"
           />
         </div>
-        <div className="absolute right-10 top-54 p-2 rounded-full hover:bg-gray-100 cursor-pointer">
+        <div onClick={editUsrDtls} className="absolute right-10 top-54 p-2 rounded-full hover:bg-gray-100 cursor-pointer">
           <MdOutlineModeEdit size={28} />
         </div>
       </section>
@@ -171,6 +176,10 @@ const MainProfile = () => {
             )
         }
       </section>
+
+      {
+        editUser && <EditUserDetails close={()=>setEditUser(false)} />
+      }
     </>
   );
 };

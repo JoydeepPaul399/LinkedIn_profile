@@ -5,10 +5,11 @@ import Line from './Line'
 import company1 from '../assets/company1.jpg'
 import company2 from '../assets/company2.jpg'
 import rightSvg from '../assets/rightSvg.svg'
+import { CgArrowRight } from 'react-icons/cg'
 
 const InterestSection = () => {
     return (
-        <section className='w-full h-full pb-4 '>
+        <section className='w-full h-full '>
             <div className="flex justify-between items-center py-2 px-4">
                 <div>
                     <h1 className="font-semibold text-lg text-[#191919]">Interests</h1>
@@ -44,6 +45,16 @@ const InterestSection = () => {
                     </div>
                 </div>
             </div>
+
+            <Line />
+      <div className='flex justify-center items-center w-full h-full py-2 cursor-pointer hover:bg-gray-200 transition-all duration-300 ease-in'>
+        <div className='flex justify-center items-center text-[#404040] font-semibold'>
+          <span>Show all companies</span>
+          <div>
+            <CgArrowRight size={22} />
+          </div>
+        </div>
+      </div>
         </section>
     )
 }

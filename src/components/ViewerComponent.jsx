@@ -2,7 +2,7 @@ import React from 'react'
 import viewerImg from '../assets/viewer.png'
 const ViewerComponent = ({image, name}) => {
     return (
-        <div className='flex flex-col w-[80%] justify-start gap-4'>
+        <div className='flex flex-col lg:w-[80%] md:w-full justify-start gap-4'>
             <div className='flex gap-1.5 justify-start items-start w-full'>
                 <img className='h-12 rounded-full' src={image} alt="Viewer Image" />
                 <h3 className='text-[#272727] font-semibold'>{name}</h3>

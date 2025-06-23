@@ -9,18 +9,18 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 const Navbar = () => {
     
   return (
-    <header className='fixed top-0 left-0 h-14 bg-white w-full border border-t-transparent border-l-transparent border-r-transparent border-b-[#e8e8e8] z-100 '>
-        <nav className='h-full'>
+    <header className='fixed top-0 left-0 lg:h-16 bg-white w-full border border-t-transparent border-l-transparent border-r-transparent border-b-[#e8e8e8] z-10 max-w-screen'>
+        <nav className='h-full py-2'>
             {/* Left side  */}
-            <div className='flex items-center justify-center gap-28 h-full'>
+            <div className='flex items-center justify-around gap-6 h-full'>
 
-                <div className='flex gap-2 justify-center items-center'>
+                <div className='flex gap-2 md:gap-3 justify-center items-center'>
                     <div>
                         <Link to="/">
                             <img src={logo} alt="LinkedIn" />
                         </Link>
                     </div>
-                    <div className='flex border border-[#dadada] rounded-4xl w-72 h-8 px-2 items-center gap-2'>
+                    <div className='border border-[#dadada] rounded-4xl w-72 h-8 px-2 items-center gap-2 hidden lg:flex'>
                         <div className='flex justify-center items-center'>
                             <img src={search} alt="Search" />
                         </div>
@@ -28,10 +28,15 @@ const Navbar = () => {
                             <p className='text-[#666666] '>Search</p>
                         </div>
                     </div>
+                    {/* For medium devices  */}
+                    <div className='lg:hidden md:flex flex-col justify-center items-center'>
+                        <img src={search} alt="Search" />
+                        <span className='text-[#666666] text-xs'>Search</span>
+                    </div>
                 </div>
 
                 {/* right */}
-                <div className='flex gap-6 h-full justify-center items-center'>
+                <div className='flex gap-4 h-full justify-center items-center'>
                     {/* Home  */}
                     <div className='relative group cursor-pointer'>
                         <div>
@@ -40,7 +45,7 @@ const Navbar = () => {
                             </svg>
                         </div>
                         <div className='w-[16px] h-[16px] rounded-full  border-5 bg-white border-[#CB112D] absolute -top-1 right-1'></div>
-                        <p className='text-[#666666] text-sm group-hover:text-black'>Home</p>
+                        <p className='hidden md:block text-[#666666] text-xs group-hover:text-black'>Home</p>
                     </div>
 
                     {/* My Network  */}
@@ -53,7 +58,7 @@ const Navbar = () => {
                             </div>
                             <div className='w-[16px] h-[16px] rounded-full bg-[#CB112D] text-white flex justify-center items-center absolute -top-1 right-5'>5</div>
                         </div>
-                        <p className='text-[#666666] text-sm group-hover:text-black'>My Network</p>
+                        <p className='hidden md:block text-[#666666] text-xs group-hover:text-black'>My Network</p>
                     </div>
 
                     {/* Jobs  */}
@@ -63,7 +68,7 @@ const Navbar = () => {
                             <path d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z"></path>
                             </svg>
                         </div>
-                        <p className='text-[#666666] text-sm group-hover:text-black'>Jobs</p>
+                        <p className='hidden md:block text-[#666666] text-xs group-hover:text-black'>Jobs</p>
                     </div>
 
                     {/* Messaging  */}
@@ -73,7 +78,7 @@ const Navbar = () => {
                             <path d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z"></path>
                             </svg>
                         </div>
-                        <p className='text-sm text-[#666666] group-hover:text-black'>Messaging</p>
+                        <p className='hidden md:block text-xs text-[#666666] group-hover:text-black'>Messaging</p>
                     </div>
 
                     {/* Notification  */}
@@ -86,7 +91,7 @@ const Navbar = () => {
                             </div>
                             <div className='w-[16px] h-[16px] rounded-full bg-[#CB112D] text-white flex justify-center items-center absolute -top-1 right-5'>5</div>
                         </div>
-                        <p className='text-[#666666] text-sm group-hover:text-black'>Notification</p>
+                        <p className='hidden md:block text-[#666666] text-xs group-hover:text-black'>Notification</p>
                     </div>
                     
                     {/* Me button */}
@@ -95,26 +100,29 @@ const Navbar = () => {
                             <img className='w-6 rounded-full' src={myImage} alt="my Image" />
                         </div>
                         <div className='flex justify-center items-center group cursor-pointer'>
-                            <span className='text-[#666666] text-sm group-hover:text-black'>Me</span>
-                            <span className=' text-[#666666] text-sm group-hover:text-black'>
+                            <span className='hidden md:block text-[#666666] text-xs group-hover:text-black'>Me</span>
+                            <span className=' hidden md:block text-[#666666] group-hover:text-black'>
                                 <MdOutlineArrowDropDown size={20} />
                             </span>
                         </div>
                     </div>
                     
                     {/* For Business  */}
-                    <div className='flex flex-col justify-center items-center group cursor-pointer pl-4 border border-l-gray-300 border-r-transparent border-t-transparent border-b-transparent h-full'>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" className="mercado-match text-[#666666] group-hover:text-black" width="24" height="24" focusable="false">
-                            <path d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z"></path>
-                            </svg>
-                        </div>
+                    <div className='flex justify-around gap-1'>
 
-                        <div className='flex'>
-                            <span className='text-sm text-[#666666] group-hover:text-black'>For Business</span>
-                            <span className=' text-[#666666] text-sm group-hover:text-black'>
-                                <MdOutlineArrowDropDown size={20} />
-                            </span>
+                        <div className='flex flex-col justify-center items-center group cursor-pointer pl-4 border border-l-gray-300 border-r-transparent border-t-transparent border-b-transparent h-full'>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" className="mercado-match text-[#666666] group-hover:text-black" width="24" height="24" focusable="false">
+                                <path d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z"></path>
+                                </svg>
+                            </div>
+
+                            <div className='flex justify-center items-center gap-0'>
+                                <span className='hidden md:block text-xs  text-[#666666] group-hover:text-black'>For Business</span>
+                                <span className=' hidden md:block text-[rgb(102,102,102)] text-sm group-hover:text-black'>
+                                    <MdOutlineArrowDropDown size={20} />
+                                </span>
+                            </div>
                         </div>
                     </div>
 
