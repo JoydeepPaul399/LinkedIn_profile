@@ -4,22 +4,41 @@ import Profile from './pages/Profile';
 import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-function App() {
 
+function AppContent() {
+  const mode = useSelector((state) => state.user.mode);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', mode === 'dark');
+  }, [mode]);
 
   return (
     <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Profile />} />
+      </Routes>
+      <Footer />
+    </>
+  );
+}
+
+
+
+
+function App() {
+  
+
+  return (
+    <>
+       <Provider store={store}>
       <BrowserRouter>
-        <Provider store={store}>
-          <Navbar />
-          <Routes>
-            {/* <Route to="/profile" element={<Profile/>} /> */}
-            <Route path="/" element={<Profile />} />
-          </Routes>
-          <Footer />
-        </Provider>
+        <AppContent />
       </BrowserRouter>
+    </Provider>
     </>
   )
 }
