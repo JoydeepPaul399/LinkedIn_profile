@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import Line from './Line';
+import { useSelector } from 'react-redux';
 
 const EditUserDetails = ({ close }) => {
+  // user details from redux store 
+    const user= useSelector((state)=>state.user)
+
+  const [userDetails, setUserDetails]= useState({
+    fName: user?.fName,
+    lName: user?.lName,
+    bio: user?.bio,
+    industry: user?.industry,
+    school: user?.clgName
+  })
+
+  const handleOnChnage= (e)=>{
+    setUserDetails({...userDetails, [e.target.name]: e.target.value})
+  }
+
   return (
-    <div className="fixed inset-0 z-20 bg-black/50 flex justify-center items-start overflow-y-auto">
+    <div className="fixed inset-0 z-105 bg-black/50 flex justify-center items-start overflow-y-auto">
       <div className="bg-white dark:bg-gray-900 w-full max-w-2xl mt-8 rounded flex flex-col max-h-[90vh]">
 
         {/* Header */}
@@ -30,6 +46,9 @@ const EditUserDetails = ({ close }) => {
                 type="text"
                 id="fName"
                 className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-8 rounded px-2 py-1 text-sm text-black dark:text-gray-100 transition-all duration-100 hover:border-2 hover:border-gray-400 dark:hover:border-gray-400"
+                name='fName'
+                value={userDetails?.fName}
+                onChange={handleOnChnage}
               />
             </div>
 
@@ -40,6 +59,9 @@ const EditUserDetails = ({ close }) => {
                 type="text"
                 id="lName"
                 className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-8 rounded px-2 py-1 text-sm text-black dark:text-gray-100 transition-all duration-100 hover:border-2 hover:border-gray-400 dark:hover:border-gray-400"
+                name='lName'
+                value={userDetails?.lName}
+                onChange={handleOnChnage}
               />
             </div>
 
@@ -64,6 +86,9 @@ const EditUserDetails = ({ close }) => {
               <textarea
                 id="headline"
                 className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-20 rounded px-2 py-2 text-sm text-black dark:text-gray-100 resize-none transition-all duration-100 hover:border-2 hover:border-gray-400 dark:hover:border-gray-400"
+                name='bio'
+                value={userDetails?.bio}
+                onChange={handleOnChnage}
               />
             </div>
 
@@ -76,6 +101,9 @@ const EditUserDetails = ({ close }) => {
                   type="text"
                   id="industry"
                   className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-8 rounded px-2 py-1 text-sm text-black dark:text-gray-100 transition-all duration-100 hover:border-2 hover:border-gray-400 dark:hover:border-gray-400"
+                  name='industry'
+                  value={userDetails?.industry}
+                  onChange={handleOnChnage}
                 />
               </div>
             </div>
@@ -89,6 +117,9 @@ const EditUserDetails = ({ close }) => {
                   type="text"
                   id="school"
                   className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-8 rounded px-2 py-1 text-sm text-black dark:text-gray-100 transition-all duration-100 hover:border-2 hover:border-gray-400 dark:hover:border-gray-400"
+                  name='school'
+                  value={userDetails?.school}
+                  onChange={handleOnChnage}
                 />
               </div>
             </div>

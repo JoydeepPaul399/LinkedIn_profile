@@ -1,9 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
+import clgImage from "../assets/clg.jpg";
 
 const initialValue= {
     mode: localStorage.getItem("theme") || "light",
     fName: "Joydeep",
-    lName: "Paul"
+    lName: "Paul",
+    bio: 'Full Stack Developer | Frontend Developer (React.js, MERN Stack) |DevOps Enthusiast | Data Analytics Learner | Open to Work',
+    address: "Bengaluru, Karnataka, India",
+    countOfConnection: "249",
+    clgName: "Amity University Online",
+    clgImg: clgImage,
+    courseName: "Bachelor of Computer Application",
+    industry: "Information Technology",
+    courseDuration: "Jan 2022 - Mar 2025",
+    grade: "A",
+    profileView: 38,
+    postImpression: 226,
+    searchAppear: 17,
 }
 
 export const userSlice= createSlice({
@@ -18,10 +31,7 @@ export const userSlice= createSlice({
             state.mode= state.mode==="light" ? "dark" : "light"
             localStorage.setItem('theme', state.mode);
         },
-        // setTheme: (state, action) => {
-        //     state.mode = action.payload;
-        //     localStorage.setItem('theme', state.mode);
-        // }
+        
     }
 })
 

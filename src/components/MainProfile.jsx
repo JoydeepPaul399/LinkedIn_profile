@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import coverImage from "../assets/coverPhoto.jpg";
 import myImage from "../assets/myImage.jpg";
 import { MdKeyboardArrowRight, MdOutlineModeEdit } from "react-icons/md";
-import clgImage from "../assets/clg.jpg";
 import { Link } from "react-router-dom";
 import { GrFormEdit } from "react-icons/gr";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import EditUserDetails from "./EditUserDetails";
+import { useSelector } from "react-redux";
 
 const MainProfile = () => {
     const ref = useRef();
@@ -15,6 +15,8 @@ const MainProfile = () => {
     const [showLeftScrollBtn, setShowLeftScrollBtn] = useState(false);
     const [showRightScrollBtn, setShowRightScrollBtn] = useState(false);
     const [editUser, setEditUser] = useState(false);
+    // user details from redux store 
+    const user= useSelector((state)=>state.user)
 
     const handleScroll = () => {
         const el = ref.current;
@@ -68,7 +70,7 @@ const MainProfile = () => {
                     <div>
                         <div className="flex gap-2 items-center">
                             <h1 className="font-bold text-3xl text-[#1d1d1d] dark:text-white">
-                                Joydeep Paul
+                                {user?.fName + " " + user?.lName}
                             </h1>
                             <div>
                                 <svg
@@ -94,22 +96,21 @@ const MainProfile = () => {
                             </div>
                         </div>
                         <p className="mr-6 text-base text-[#1a1a1a] dark:text-white">
-                            Full Stack Developer | Frontend Developer (React.js, MERN Stack) |
-                            DevOps Enthusiast | Data Analytics Learner | Open to Work
+                            {user?.bio}
                         </p>
                         <div className="flex items-center gap-2">
                             <p className="text-[#00000099] text-[14px] dark:text-white">
-                                Bengaluru, Karnataka, India
+                                {user?.address}
                             </p>
                             <span className="w-0.5 h-0.5 text-sm bg-[#9e9e9e] rounded-full"></span>
                             <Link className="text-[14px] text-[#0A66C2] dark:text-[#3394FF] font-semibold hover:underline" to="#">Contact info</Link>
                         </div>
-                        <Link to="#" className="text-sm text-[#0A66C2] dark:text-[#3394FF] font-semibold hover:underline">249 Connection</Link>
+                        <Link to="#" className="text-sm text-[#0A66C2] dark:text-[#3394FF] font-semibold hover:underline">{user?.countOfConnection} Connection</Link>
                     </div>
                 </div>
                 <div className="flex justify-center items-center gap-2 w-full dark:text-white">
-                    <img className="w-8" src={clgImage} alt="College Logo" />
-                    <h6>Amity University Online</h6>
+                    <img className="w-8" src={user?.clgImg} alt="College Logo" />
+                    <h6>{user?.clgName}</h6>
                 </div>
             </div>
 
