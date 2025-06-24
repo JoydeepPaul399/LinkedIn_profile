@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 
+
 function AppContent() {
   const mode = useSelector((state) => state.user.mode);
 
@@ -17,6 +18,7 @@ function AppContent() {
 
   return (
     <>
+      
       <Navbar />
       <Routes>
         <Route path="/" element={<Profile />} />

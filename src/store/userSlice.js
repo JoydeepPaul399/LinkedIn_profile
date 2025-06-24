@@ -17,24 +17,31 @@ const initialValue= {
     profileView: 38,
     postImpression: 226,
     searchAppear: 17,
+    selectedPronoun: "nil"
 }
 
 export const userSlice= createSlice({
     name: "user",
     initialState: initialValue,
     reducers: {
-        setUserDetails: (state, action)=>{
-            state.fName=action.payload?.fName,
-            state.lName= action.payload?.lName
-        },
         toggleTheme: (state)=>{
             state.mode= state.mode==="light" ? "dark" : "light"
             localStorage.setItem('theme', state.mode);
         },
+        setPronoun: (state, action)=>{
+            state.selectedPronoun= action.payload
+        },
+        setUserDetailsReducers: (state, action)=>{
+            state.fName= action.payload.fName
+            state.lName= action.payload.lName
+            state.bio= action.payload.bio
+            state.industry= action.payload.industry
+            state.school= action.payload.school
+        }
         
     }
 })
 
-export const {setUserDetails, toggleTheme}= userSlice.actions
+export const { toggleTheme, setPronoun, setUserDetailsReducers }= userSlice.actions
 
 export default userSlice.reducer

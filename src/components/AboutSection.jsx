@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { MdOutlineModeEdit } from 'react-icons/md';
+import React, { useRef, useState, useEffect } from "react";
+import { MdOutlineModeEdit } from "react-icons/md";
 
 const AboutSection = ({ text }) => {
   const textRef = useRef(null);
@@ -24,7 +24,9 @@ const AboutSection = ({ text }) => {
     <section className="w-full mx-4 max-w-full box-border pr-6">
       {/* Header */}
       <div className="flex justify-between items-center py-2">
-        <h1 className="font-semibold text-lg text-[#191919] dark:text-white">About</h1>
+        <h1 className="font-semibold text-lg text-[#191919] dark:text-white">
+          About
+        </h1>
         <button
           type="button"
           aria-label="Edit about section"
@@ -38,7 +40,7 @@ const AboutSection = ({ text }) => {
       <div
         ref={textRef}
         className={`overflow-hidden pr-2 whitespace-pre-wrap transition-all duration-100 text-gray-800 dark:text-gray-300 ${
-          isExpanded ? 'max-h-full' : 'max-h-[100px]'
+          isExpanded ? "max-h-full" : "max-h-[100px]"
         }`}
       >
         {text}
@@ -51,7 +53,7 @@ const AboutSection = ({ text }) => {
           className="mt-2 text-blue-600 dark:text-blue-400 font-semibold cursor-pointer hover:underline focus:outline-none"
           type="button"
         >
-          {isExpanded ? 'See less' : 'See more'}
+          {isExpanded ? "See less" : "See more"}
         </button>
       )}
     </section>

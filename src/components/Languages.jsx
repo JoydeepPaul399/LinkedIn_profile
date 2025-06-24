@@ -1,5 +1,5 @@
 import React from "react";
-import languages from '../assets/language'
+import languages from "../assets/language";
 import { IoIosAdd } from "react-icons/io";
 import { MdOutlineModeEdit } from "react-icons/md";
 import Language from "./Language";
@@ -12,7 +12,9 @@ const Languages = () => {
     <div className="w-full h-full pb-4">
       <div className="flex justify-between items-center py-2 px-4">
         <div>
-          <h1 className="font-semibold text-lg text-[#191919] dark:text-[#ddd]">Languages</h1>
+          <h1 className="font-semibold text-lg text-[#191919] dark:text-[#ddd]">
+            Languages
+          </h1>
         </div>
         <div className="flex justify-center items-center gap-2 ">
           <div className="text-[#404040] dark:text-[#bbb] p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">
@@ -28,14 +30,12 @@ const Languages = () => {
       </div>
 
       <div className="flex flex-col gap-3">
-        {
-          languages.map((item, index) => (
-            <div className="mx-4" key={index}>
-              <Language name={item.name} proficiency={item.proficiency} />
-              {index !== lastIndex && <Line />}
-            </div>
-          ))
-        }
+        {languages.map((item, index) => (
+          <div className="mx-4" key={index}>
+            <Language name={item.name} proficiency={item.proficiency} />
+            {index !== lastIndex && <Line />}
+          </div>
+        ))}
       </div>
     </div>
   );

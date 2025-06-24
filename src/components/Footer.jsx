@@ -15,10 +15,14 @@ const Footer = () => {
             <div>
               <ul className="flex flex-col gap-2">
                 <li>
-                  <Link to="#" className="hover:underline">About</Link>
+                  <Link to="#" className="hover:underline">
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:underline">Professional Community Policies</Link>
+                  <Link to="#" className="hover:underline">
+                    Professional Community Policies
+                  </Link>
                 </li>
                 <li>
                   <Link to="#" className="flex hover:underline">
@@ -29,42 +33,62 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:underline">Sales Solutions</Link>
+                  <Link to="#" className="hover:underline">
+                    Sales Solutions
+                  </Link>
                 </li>
                 <li>
-                  <Link to="#" className="hover:underline">Safety Center</Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link to="#" className="hover:underline">Accessibility</Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:underline">Careers</Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:underline">Ad Choices</Link>
-                </li>
-                <li>
-                  <Link to="#" className="hover:underline">Mobile</Link>
+                  <Link to="#" className="hover:underline">
+                    Safety Center
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <ul className="flex flex-col gap-2">
                 <li>
-                  <Link to={"#"} className="hover:underline">Talent Solutions</Link>
+                  <Link to="#" className="hover:underline">
+                    Accessibility
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"#"} className="hover:underline">Marketing Solutions</Link>
+                  <Link to="#" className="hover:underline">
+                    Careers
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"#"} className="hover:underline">Advertising</Link>
+                  <Link to="#" className="hover:underline">
+                    Ad Choices
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"#"} className="hover:underline">Small Business</Link>
+                  <Link to="#" className="hover:underline">
+                    Mobile
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul className="flex flex-col gap-2">
+                <li>
+                  <Link to={"#"} className="hover:underline">
+                    Talent Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className="hover:underline">
+                    Marketing Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className="hover:underline">
+                    Advertising
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"#"} className="hover:underline">
+                    Small Business
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -78,23 +102,33 @@ const Footer = () => {
                 <RiQuestionFill size={25} />
                 <div className="flex flex-col gap-1 text-[#00000099] dark:text-[#ddddddcc]">
                   <span className="text-sm font-semibold">Questions</span>
-                  <span className="text-[13px] text-[#62615f] dark:text-[#bbbbbb]">Visit our Help Center</span>
+                  <span className="text-[13px] text-[#62615f] dark:text-[#bbbbbb]">
+                    Visit our Help Center
+                  </span>
                 </div>
               </div>
 
               <div className="flex gap-1 items-start text-[#3d3d3c] dark:text-[#cccccc]">
                 <IoSettingsSharp size={25} />
                 <div className="flex flex-col gap-1 text-[#00000099] dark:text-[#ddddddcc]">
-                  <span className="text-sm font-semibold">Manage your account and privacy</span>
-                  <span className="text-[13px] text-[#62615f] dark:text-[#bbbbbb]">Go to your Settings.</span>
+                  <span className="text-sm font-semibold">
+                    Manage your account and privacy
+                  </span>
+                  <span className="text-[13px] text-[#62615f] dark:text-[#bbbbbb]">
+                    Go to your Settings.
+                  </span>
                 </div>
               </div>
 
               <div className="flex gap-1 items-start text-[#3d3d3c] dark:text-[#cccccc]">
                 <MdPrivacyTip size={25} />
                 <div className="flex flex-col gap-1 text-[#00000099] dark:text-[#ddddddcc]">
-                  <span className="text-sm font-semibold">Recommendation transparency</span>
-                  <span className="text-[13px] text-[#62615f] dark:text-[#bbbbbb]">Learn more about Recommended Content.</span>
+                  <span className="text-sm font-semibold">
+                    Recommendation transparency
+                  </span>
+                  <span className="text-[13px] text-[#62615f] dark:text-[#bbbbbb]">
+                    Learn more about Recommended Content.
+                  </span>
                 </div>
               </div>
             </div>
@@ -117,7 +151,9 @@ const Footer = () => {
                 <option value="Čeština (Czech)">Čeština (Czech)</option>
                 <option value="हिंदी (Hindi)">हिंदी (Hindi)</option>
                 <option value="Italiano (Italian)">Italiano (Italian)</option>
-                <option value="Bahasa Malaysia (Malay)">Bahasa Malaysia (Malay)</option>
+                <option value="Bahasa Malaysia (Malay)">
+                  Bahasa Malaysia (Malay)
+                </option>
               </select>
             </div>
           </div>
